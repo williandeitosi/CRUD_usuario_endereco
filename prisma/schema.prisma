@@ -14,14 +14,26 @@ datasource db {
 }
 
 model User {
-  id          String @id @default(uuid())
+  id          String    @id @default(uuid())
   name        String
-  email       String @unique
-  phoneNumber String @map("phone_number")
+  email       String    @unique
+  phoneNumber String    @map("phone_number")
+  Address     Address[]
 
   @@map("users")
 }
 
 model Address {
-  id String @id @default(uuid())
+  id           String @id @default(uuid())
+  ZIPCode      String @map("zip_code")
+  Address      String
+  Number       Int
+  Neighborhood String
+  State        String
+  City         String
+  userId       String @map("user_id")
+
+  address User @relation(fields: [userId], references: [id])
+
+  @@map("address")
 }

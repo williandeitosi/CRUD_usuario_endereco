@@ -1,0 +1,30 @@
+
+@baseUrl = http://localhost:3333
+
+POST {{baseUrl}}/users
+Content-Type: application/json
+
+{
+  "name":"willian",
+  "email": "willan@email.com",
+  "phoneNumber": "99994444"
+}
+
+###
+GET {{baseUrl}}/users/all
+
+###
+GET {{baseUrl}}/user/47990bb2-d0e3-463e-a36a-9f7f5dc0bd3a
+
+###
+DELETE {{baseUrl}}/user/fc573de2-11d1-43d9-9114-e4c4bd5c762e
+
+###
+PUT {{baseUrl}}/user/update/47990bb2-d0e3-463e-a36a-9f7f5dc0bd3a
+Content-Type: application/json
+
+{
+  "name":"willian update",
+  "email": "willan@email.com",
+  "phoneNumber": "99994444"
+}
