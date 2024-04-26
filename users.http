@@ -5,9 +5,22 @@ POST {{baseUrl}}/users
 Content-Type: application/json
 
 {
-  "name":"willian",
-  "email": "willan@email.com",
+  "name":"vitorgay",
+  "email": "mamaovo@email.com",
   "phoneNumber": "99994444"
+}
+
+###
+POST {{baseUrl}}/user/47990bb2-d0e3-463e-a36a-9f7f5dc0bd3a/address
+Content-Type: application/json
+
+{
+  "ZIPCode": "12345",
+  "Address": "Rua Teste",
+  "Number": 10,
+  "Neighborhood": "Bairro Teste",
+  "State": "Estado Teste",
+  "City": "Cidade Teste"
 }
 
 ###
@@ -20,11 +33,24 @@ GET {{baseUrl}}/user/47990bb2-d0e3-463e-a36a-9f7f5dc0bd3a
 DELETE {{baseUrl}}/user/fc573de2-11d1-43d9-9114-e4c4bd5c762e
 
 ###
-PUT {{baseUrl}}/user/update/47990bb2-d0e3-463e-a36a-9f7f5dc0bd3a
+PUT {{baseUrl}}/user/update/1df53ddb-97bb-4a86-a57c-34b60c49cf44
 Content-Type: application/json
 
 {
-  "name":"willian update",
-  "email": "willan@email.com",
+  "name":"meu mano vitor",
+  "email": "mamaovo@email.com",
   "phoneNumber": "99994444"
+}
+
+###
+PUT {{baseUrl}}/user/47990bb2-d0e3-463e-a36a-9f7f5dc0bd3a/address/c28b431a-a482-4621-a95d-58dfaea43deb
+Content-Type: application/json
+
+{
+  "ZIPCode": "ZIPCode",
+  "Address": "Address",
+  "Number": 20,
+  "Neighborhood": "Neighborhood",
+  "State": "State",
+  "City": "City"
 }

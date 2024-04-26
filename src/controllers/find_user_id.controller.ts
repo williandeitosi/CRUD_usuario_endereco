@@ -11,6 +11,7 @@ export class FindUserController {
       where: {
         id: id,
       },
+      include: { Address: true },
     });
 
     if (!findUser) {
