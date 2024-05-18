@@ -44,15 +44,13 @@ export class UpdateAddressController {
       });
 
       if (!findUser) {
-        throw new NotFoundException('Usuario não encontrado');
+        throw new NotFoundException('User ID is not exists!');
       }
 
       const findAddress = findUser.Address.find((a) => a.id === addressId);
 
       if (!findAddress) {
-        throw new NotFoundException(
-          'Endereço não encontrado para este usuário',
-        );
+        throw new NotFoundException('Address ID is not exists!');
       }
 
       const addressUpdate = await this.prisma.address.update({
@@ -69,8 +67,8 @@ export class UpdateAddressController {
 
       return addressUpdate;
     } catch (error) {
-      console.error(error);
-      throw new Error('Erro ao atualizar enderço');
+      // console.error(error);
+      throw new NotFoundException('Address ID is not exists!');
     }
   }
 }

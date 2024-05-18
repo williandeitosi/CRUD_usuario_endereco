@@ -54,3 +54,8 @@ Content-Type: application/json
   "State": "State",
   "City": "City"
 }
+
+
+###
+
+DELETE {{baseUrl}}/user/47990bb2-d0e3-463e-a36a-9f7f5dc0bd3a/address/c28b431a-a482-4621-a95d-58dfaea43deb

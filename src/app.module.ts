@@ -7,6 +7,7 @@ import { DeleteUserController } from './controllers/delete_user.controller';
 import { UpdateUserController } from './controllers/update_user.controller';
 import { CreateAddressController } from './controllers/create_address.controller';
 import { UpdateAddressController } from './controllers/update_address.controller';
+import { DeleteAddressController } from './controllers/delete_address.controller';
 
 @Module({
   imports: [],
@@ -18,6 +19,7 @@ import { UpdateAddressController } from './controllers/update_address.controller
     UpdateUserController,
     CreateAddressController,
     UpdateAddressController,
+    DeleteAddressController,
   ],
   providers: [PrismaService],
 })
