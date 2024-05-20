@@ -9,9 +9,10 @@ import { CreateAddressController } from './controllers/create_address.controller
 import { UpdateAddressController } from './controllers/update_address.controller';
 import { DeleteAddressController } from './controllers/delete_address.controller';
 import { ClientModule } from './client/client.module';
+import { AuthModule } from './auth/auth.module';
 
 @Module({
-  imports: [ClientModule],
+  imports: [ClientModule, AuthModule],
   controllers: [
     CreateUserController,
     ListUsersController,

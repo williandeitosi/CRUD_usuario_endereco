@@ -21,7 +21,9 @@ export class ClientService {
     };
   }
 
-  findOne(id: number) {
-    return `This action returns a #${id} client`;
+  findByEmail(email: string) {
+    return this.prisma.client.findUnique({
+      where: { email },
+    });
   }
 }
